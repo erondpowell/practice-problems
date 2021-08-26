@@ -1,3 +1,3 @@
 # practice-problems
-A repo of (almost) all the practice problems, coursework and notes.
+A repo with most of the major practice problems, coursework and notes I have worked through.
 
