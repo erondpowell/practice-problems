@@ -1,8 +1,21 @@
 const button = document.querySelector("button");
-const paragraph = document.querySelector("p");
+const output = document.querySelector("p");
+
+const getPosition = (opts) => {
+  const promise = new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(
+      (success) => {
+        resolve(success);
+      },
+      (error) => {},
+      opts
+    );
+  });
+  return promise;
+};
 
 const setTimer = (duration) => {
-  const promise = new Promise((resolve, reject), () => {
+  const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve("Done!");
     }, duration);
@@ -10,28 +23,28 @@ const setTimer = (duration) => {
   return promise;
 };
 
-
 function trackUserHandler() {
-  navigator.geolocation.getCurrentPosition(
-    (posData) => {
-      setTimer(2000).then(data => {
-        console.log(data, posData)
-      });
-    },
-    (error) => {
-      console.log(error);
-    }
-  );
-  setTimeout(() => {
-    console.log("Time Done!");
-  });
+  let positionData;
+
+  getPosition()
+    .then((posData) => {
+      positionData = posData;
+      return setTimer(2000);
+    })
+    .then((data) => {
+      console.log(data, positionData);
+    });
+
+  setTimer(1000).then(() => {console.log("done")});
+
+  console.log("getting position");
 }
 
 button.addEventListener("click", trackUserHandler);
 
-let result = 0;
-for (let i = 0; i < 10000000; i++) {
-  result += i;
-}
+// let result = 0;
+// for (let i = 0; i < 10000000; i++) {
+//   result += i;
+// }
 
-console.log(result);
+// console.log(result);
