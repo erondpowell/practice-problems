@@ -46,13 +46,17 @@ img {
   position: fixed;
   top: 0px;
   padding: 0 30px;
+  transition: 0.5s;
+}
+
+.navbar.top {
+  background: transparent;
 }
 
 .navbar a {
   color: #fff;
   padding: 10px 20px;
   margin: 0 5px;
-
 }
 
 .navbar a:hover {
@@ -75,6 +79,11 @@ img {
   height: 100vh;
   position: relative;
   color: #fff;
+}
+
+.hero.blog {
+  background: url('../images/home/blog.jpg')  no-repeat center center/cover;
+  height: 30vh;
 }
 
 .hero .content {
@@ -134,6 +143,12 @@ img {
 }
 
 
+.cases img {
+  height: 30vh;
+  /* max-width: 30vw; */
+  object-fit: cover;
+}
+
 .cases img:hover {
   opacity: 0.7;
 }
@@ -172,6 +187,31 @@ img {
 .callback-form .btn {
   padding: 12px 0;
   margin-top: 20px;
+}
+
+/* POST */
+.post {
+  padding: 50px 30px;
+  /* width: 70vw;
+  margin: 0 auto 0; */
+}
+
+.post h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: #ccc 1px solid;
+}
+
+.post .meta {
+  margin-bottom: 30px;
+}
+
+.post img {
+  width: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 30px;
 }
 
 /* FOOTER */
@@ -223,7 +263,19 @@ img {
     width: 70%;
   }
 
+.cases img {
+  /* min-height: 50%; */
+  /* margin: 50px auto; */
+  }
+
 }
+
+
+
+
+
+
+
 /*
 @media (max-width: 360px) {
 .navbar {

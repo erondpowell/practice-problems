@@ -144,3 +144,7 @@
   max-width: 25%;
   padding: 0 4px;
 }
+
+.cases img {
+  object-fit: cover;
+}
