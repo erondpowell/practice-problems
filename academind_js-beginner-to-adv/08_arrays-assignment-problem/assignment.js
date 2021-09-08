@@ -1,4 +1,4 @@
-let bq = [1,2,3,4,5,6,3,2,2,5,6,7,8,9,4,235,2356,5];
+let bq = [1,2,3,0,5,6,3,2,2,5,6,7,8,9,4,235,2356,5];
 console.log("this is the array: " + bq);
 
 console.log("can js arrays index?: " + bq[3]);
@@ -27,16 +27,29 @@ const product = bq.reduce(
 console.log("ginormous product: " + product);
 
 // MAX VALUE OF ALL STUFF THAT IS SWAG
-let findMax = function(...an_array) {
+let findMax = function(an_array) {
   let largest_num = an_array[0];
-  for (const num in an_array) {
+  let smallest_num = an_array[0];
+  for (const num of an_array) {
     if (num > largest_num) {
       largest_num = num;
     }
+    if (num < smallest_num) {
+      smallest_num = num;
+    }
   }
-  return largest_num;
+  return [largest_num, smallest_num];
 }
 
 // console.log(bq);
 console.log("\n findMax in Action:");
-console.log(findMax(...bq));
+console.log(findMax(bq));
+
+
+const [max, min] = findMax(bq);
+console.log(min, max);
+
+const userIds = new Set();
+
+userIds.add(5);
+console.log(userIds);
