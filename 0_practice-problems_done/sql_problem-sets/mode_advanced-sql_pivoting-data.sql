@@ -2,10 +2,6 @@
 
 
 
-
-
-
-
 -- ADV. SQL TUTORIAL - PIVOTING DATA - NOTES
 -- FOUND ON: https://mode.com/sql-tutorial/sql-pivot-table/
 
