@@ -19,6 +19,8 @@ function Expenses(props) {
 }
 
 export default Expenses;
+
+
   // for (let expense of props.expenses) {
   //   // console.log(expense)
   //   allExpenses += (
