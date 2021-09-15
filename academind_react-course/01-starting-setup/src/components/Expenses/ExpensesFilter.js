@@ -11,7 +11,6 @@ const ExpensesFilter = (props) => {
     props.onYearChange(event.target.value);
   };
 
-
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
