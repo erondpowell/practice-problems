@@ -25,7 +25,6 @@ const DUMMY_EXPENSES = [
   },
 ];
 
-
 function App() {
 
   const [expenses, setNewExpenses] = useState(DUMMY_EXPENSES);
@@ -35,7 +34,6 @@ function App() {
       return [expense, ...expenses];
     });
   };
-
 
   return (
     <div>
