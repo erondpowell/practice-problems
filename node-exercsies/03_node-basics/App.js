@@ -1,23 +1,20 @@
 const express = require("express");
+const bodyParser = require('body-parser');
 
+const path = require('path');
 const app = express();
 
+const adminRoutes = require("./routes/admin");
+const shopRoutes = require("./routes/shop");
 
-app.use('/add-product', (req, res, next) => {
-  console.log('always do this');
-  next();
-});
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname, "public")));
 
+app.use("/admin", adminRoutes);
+app.use(shopRoutes);
 
-app.use('/add-product', (req, res, next) => {
-  console.log("in a new middleware");
-  res.send('<h1>Add Product page</h1>');
-});
-
-
-app.use('/', (req, res, next) => {
-  console.log("in a new middleware");
-  res.send('<h1>Hey Ya</h1>');
-});
+app.use((req, res, next) => {
+  res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
+})
 
 app.listen(3000);
