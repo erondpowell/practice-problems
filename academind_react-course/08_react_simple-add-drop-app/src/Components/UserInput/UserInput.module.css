@@ -1,0 +1,32 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0.3vh auto;
+  padding: 0;
+  background-color: #ccc;
+}
+
+.userInput {
+  font-weight: bold;
+}
+
+.userInput form {
+  display: flex;
+  flex-direction: column;
+}
+
+.userInput input {
+  display: block;
+  width: 100%;
+}
+
+.userInput label {
+  display: block;
+}
+
+.userInput button {
+  border: none;
+  padding: 1vh;
+  background-color: purple;
+  color: white;
+}

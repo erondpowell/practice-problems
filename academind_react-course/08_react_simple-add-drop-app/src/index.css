@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background-color: #ccc; */
+}
+
+html {
+  font-family: "brandon grotesque", sans-serif;
+}
+
+body {
+  margin: 0;
+}
