@@ -1,0 +1,10 @@
+/* Put your code here */
+.grid {
+  display: grid;
+
+  /* grid-template-rows: 100px 200px;
+  grid-template-columns: 200px auto 150px; */
+
+  /* Rows / columns */
+  grid-template: 100px 200px / 200px auto 150px;
+}
