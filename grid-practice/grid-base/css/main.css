@@ -1,6 +1,12 @@
 /* Put your code here */
 .grid {
   display: grid;
-  grid-template: 100px 200px / 200px auto 150px;
+  grid-template: 100px 100px 100px / 200px auto 150px;
   grid-gap: 10px;
+}
+
+
+.grid div:nth-child(2) {
+  /* row-start / col-start / row-end / col-end */
+  grid-area: 2 / 1 / 4 / 2;
 }
