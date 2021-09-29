@@ -1,50 +1,28 @@
 /* Put your code here */
 .grid {
   display: grid;
-  grid-template: 100px 100px 100px / repeat(auto-fit, minmax(100px, 1fr));
-  grid-gap: 10px;
-  justify-items: start;
-  align-items: start;
-  /* grid-template-areas:
-      "E E A"
-      "B C A"
-      ". D F" */
+  grid: 100px auto 150px / repeat(12, 1fr);
+  grid-template-areas:
+    "h h h h h h  h h h h h h"
+    ". c c c c c  c c s s s ."
+    "f f f f f f  f f f f f f";
+    grid-gap: 1%;
+  min-height: 100vh;
 }
 
-.grid div:nth-child(1) {
-  align-self: end;
-  justify-self: end;
-  /* row-start / col-start / row-end / col-end */
-  /* grid-area: 2 / 1 / 4 / 2; */
-  /* grid-area: A; */
+.header {
+  font-size: 50px;
+  grid-area: h;
 }
 
-.grid div:nth-child(2) {
-  /* row-start / col-start / row-end / col-end */
-  /* grid-area: 2 / 1 / 4 / 2; */
-  /* grid-area: B; */
+.content {
+  grid-area: c;
 }
 
-.grid div:nth-child(3) {
-  /* row-start / col-start / row-end / col-end */
-  /* grid-area: 2 / 1 / 4 / 2; */
-  /* grid-area: C; */
+.sidebar {
+  grid-area: s;
 }
 
-.grid div:nth-child(4) {
-  /* row-start / col-start / row-end / col-end */
-  /* grid-area: 2 / 1 / 4 / 2; */
-  /* grid-area: D; */
-}
-
-.grid div:nth-child(5) {
-  /* row-start / col-start / row-end / col-end */
-  /* grid-area: 2 / 1 / 4 / 2; */
-  /* grid-area: E; */
-}
-
-.grid div:nth-child(6) {
-  /* row-start / col-start / row-end / col-end */
-  /* grid-area: 2 / 1 / 4 / 2; */
-  /* grid-area: F; */
+.footer {
+  grid-area: f;
 }
