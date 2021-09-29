@@ -166,6 +166,10 @@ class App {
     finishedProjectsList.setSwitchHandlerFunction(
       activeProjectsList.addProject.bind(activeProjectsList)
     );
+
+    const someScript = document.createElement('script');
+    someScript.textContent = "alert('a cool script')";
+    document.head.append(someScript);
   }
 }
 
