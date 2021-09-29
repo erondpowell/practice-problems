@@ -1,16 +1,19 @@
 /* Put your code here */
 .grid {
   display: grid;
-  grid-template: 100px 100px 100px / repeat(auto-fill, minmax(100px, 1fr));
+  grid-template: 100px 100px 100px / repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 10px;
-
-  grid-template-areas:
+  justify-items: start;
+  align-items: start;
+  /* grid-template-areas:
       "E E A"
       "B C A"
-      ". D F"
+      ". D F" */
 }
 
 .grid div:nth-child(1) {
+  align-self: end;
+  justify-self: end;
   /* row-start / col-start / row-end / col-end */
   /* grid-area: 2 / 1 / 4 / 2; */
   /* grid-area: A; */
