@@ -1,7 +1,7 @@
 /* Put your code here */
 .grid {
   display: grid;
-  grid-template: 100px 100px 100px / repeat(6, minmax(1fr, 100px));
+  grid-template: 100px 100px 100px / repeat(auto-fill, minmax(100px, 1fr));
   grid-gap: 10px;
 
   grid-template-areas:
@@ -13,35 +13,35 @@
 .grid div:nth-child(1) {
   /* row-start / col-start / row-end / col-end */
   /* grid-area: 2 / 1 / 4 / 2; */
-  grid-area: A;
+  /* grid-area: A; */
 }
 
 .grid div:nth-child(2) {
   /* row-start / col-start / row-end / col-end */
   /* grid-area: 2 / 1 / 4 / 2; */
-  grid-area: B;
+  /* grid-area: B; */
 }
 
 .grid div:nth-child(3) {
   /* row-start / col-start / row-end / col-end */
   /* grid-area: 2 / 1 / 4 / 2; */
-  grid-area: C;
+  /* grid-area: C; */
 }
 
 .grid div:nth-child(4) {
   /* row-start / col-start / row-end / col-end */
   /* grid-area: 2 / 1 / 4 / 2; */
-  grid-area: D;
+  /* grid-area: D; */
 }
 
 .grid div:nth-child(5) {
   /* row-start / col-start / row-end / col-end */
   /* grid-area: 2 / 1 / 4 / 2; */
-  grid-area: E;
+  /* grid-area: E; */
 }
 
 .grid div:nth-child(6) {
   /* row-start / col-start / row-end / col-end */
   /* grid-area: 2 / 1 / 4 / 2; */
-  grid-area: F;
+  /* grid-area: F; */
 }
