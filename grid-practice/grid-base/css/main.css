@@ -6,7 +6,7 @@
     "h h h h h h  h h h h h h"
     ". c c c c c  c c s s s ."
     "f f f f f f  f f f f f f";
-    grid-gap: 1%;
+  grid-gap: 1%;
   min-height: 100vh;
 }
 
