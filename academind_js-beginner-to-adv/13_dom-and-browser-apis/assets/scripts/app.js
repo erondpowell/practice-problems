@@ -172,7 +172,6 @@ class App {
     document.getElementById('stop-analytics-btn').addEventListener('click', () => {
       clearTimeout(timerId);
     })
-
   }
 
   static startAnalytics() {
