@@ -1,0 +1,30 @@
+ul li {
+  margin: 1%;
+  padding: 1%;
+  width: 90%;
+  list-style-type: none;
+}
+
+li:first-child {
+  background: red;
+}
+
+li:last-child {
+  background: blue;
+}
+
+li:nth-child(3) {
+  background: pink;
+}
+
+li:nth-child(3n+0) {
+  background: mediumseagreen;
+}
+
+li:nth-child(even) {
+  background: #ddd;
+}
+
+li:nth-child(odd) {
+  background: #ccc;
+}

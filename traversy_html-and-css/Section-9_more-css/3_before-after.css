@@ -1,0 +1,76 @@
+@font-face {
+  font-family: norwester;
+  url('norwester.woff');
+}
+
+@font-face {
+  font-family: sensei;
+  url('sensei-medium.woff');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+
+  /* display: flex;
+  flex-direction: column; */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: #333;
+  color: white;
+}
+
+header {
+  width: 80%;
+  height: 50vh;
+  margin: 1%;
+  padding: 3%;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-self:center;
+  position: relative;
+}
+
+header:before {
+  content: '';
+  background: url('https://source.unsplash.com/user/erondu/1600x900')
+   no-repeat center center/cover;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+header h1 {
+  font-family: norwester;
+  font-style: normal;
+  font-size: 60px;
+}
+
+header h1 span {
+  font-family: sensei;
+  font-size: 55px;
+}
+
+.is-required:after {
+  content: '*';
+  color: red;
+}
+
+.form-div {
+  border: 1px solid pink;
+  padding: 1%;
+  margin: 1%;
+  width: 80%;
+  align-self: center;
+}
